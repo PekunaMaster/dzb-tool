@@ -9,6 +9,7 @@ import subprocess
 from AppKit import NSWorkspace
 import time
 from datetime import datetime
+import requests
 
 # load file names into memory 
 kap_hint = "Kapitalertragsbericht"
@@ -61,8 +62,10 @@ def select_file():
 # def updateCheck():
 #     update_file = open("version.txt", 'r')
 #     my_version = update_file.readlines()
-#     subprocess.call(["wget", ""])
-#     git_version = 
+#     url = 'https://github.com/alecmalloc/dzb-tool/blob/main/Pekuna%20Tools/assets/application/version.txt'
+#     r = requests.get(url, allow_redirects=True)
+#     open('this.txt', 'wb').write(r.content)
+#     # git_version = 
 
 
 
@@ -73,6 +76,8 @@ def guiSelect():
     first_window = tk.Tk()
     first_window.title("DZB Tool")
     first_window.geometry('200x100')
+    # updateCheck()
+    label = tk.Label(first_window, bg='light green', width=20, text='Bitte DZB ordner aussuchen:').pack(pady=10)
     open_button = ttk.Button(first_window, text='aussuchen', command=select_file).pack(pady=10)
     first_window.eval('tk::PlaceWindow . center')
     first_window.mainloop()
