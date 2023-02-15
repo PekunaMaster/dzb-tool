@@ -1,0 +1,3 @@
+pyobjc==8.5
+AppKit==0.2.8
+xlwings==0.28.8
