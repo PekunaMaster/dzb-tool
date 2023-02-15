@@ -59,6 +59,12 @@ def select_file():
 
 
 # def updateCheck():
+#     update_file = open("version.txt", 'r')
+#     my_version = update_file.readlines()
+#     subprocess.call(["wget", ""])
+#     git_version = 
+
+
 
 
 
