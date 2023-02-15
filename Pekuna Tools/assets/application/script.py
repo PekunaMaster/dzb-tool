@@ -9,7 +9,6 @@ import subprocess
 from AppKit import NSWorkspace
 import time
 from datetime import datetime
-from update_check import isUpToDate
 
 # load file names into memory 
 kap_hint = "Kapitalertragsbericht"
@@ -58,16 +57,16 @@ def select_file():
         else:
             guiStart(folder_name)
 
+
+# def updateCheck():
+
+
+
 def guiSelect():
     global first_window
     first_window = tk.Tk()
     first_window.title("DZB Tool")
     first_window.geometry('200x100')
-    if isUpToDate(__file__, "https://github.com/alecmalloc/dzb-tool/blob/2e17f88af85d655ad6fa3c30cb79cfeef197dd24/Pekuna%20Tools/assets/application/script.py") == False:
-        tk.messagebox.showinfo(title='Update Verfügbar', message='Eine neue Version vom Tool existiert und wird jetzt installiert')
-        subprocess.call(["git", "fetch", "--all"])
-        subprocess.call(["git", "checkout", "origin/main", "--", "Pekuna", "Tools/assets/application/script.py"])
-    label = tk.Label(first_window, bg='light green', width=20, text='Bitte DZB ordner aussuchen:').pack(pady=10)
     open_button = ttk.Button(first_window, text='aussuchen', command=select_file).pack(pady=10)
     first_window.eval('tk::PlaceWindow . center')
     first_window.mainloop()
