@@ -31,3 +31,6 @@ finish run
 finish run
 14/02/2023 12:06:43
 finish run
+15/02/2023 10:07:28
+/Users/stuart/Desktop/dzb/Pekuna Tools/assets/application/script.py
+15/02/2023 10:14:16
