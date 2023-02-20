@@ -60,7 +60,7 @@ def select_file():
 
 
 def updateCheck():
-    print(checkForUpdates(__file__, "https://github.com/alecmalloc/dzb-tool/blob/main/Pekuna%20Tools/assets/application/script.py"))
+    print(checkForUpdates(__file__, "https://raw.githubusercontent.com/alecmalloc/dzb-tool/blob/main/Pekuna%20Tools/assets/application/script.py"))
 
 
 def guiSelect():
