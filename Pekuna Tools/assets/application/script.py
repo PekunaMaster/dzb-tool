@@ -12,7 +12,7 @@ from datetime import datetime
 import git
 
 #test comment 1
-
+#test comment 2
 
 # load file names into memory 
 kap_hint = "Kapitalertragsbericht"
