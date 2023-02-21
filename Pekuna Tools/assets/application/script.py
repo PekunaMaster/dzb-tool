@@ -9,7 +9,6 @@ import subprocess
 from AppKit import NSWorkspace
 import time
 from datetime import datetime
-import git
 
 #test comment 1
 #test comment 2
