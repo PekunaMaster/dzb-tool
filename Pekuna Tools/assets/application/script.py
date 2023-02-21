@@ -59,8 +59,11 @@ def select_file():
             guiStart(folder_name)
 
 def updateCheck():
-    repo = git.Repo("https://github.com/alecmalloc/dzb-tool.git")
-    repo.remotes.upstream.pull('main')
+    # repo = git.Repo("https://github.com/alecmalloc/dzb-tool.git")
+    # repo.remotes.upstream.pull('main')
+    subprocess.call(['git', 'fetch', 'origin', 'main'])
+    subprocess.call(['git', 'merge', 'origin/main', '-m', '"this is a message"'])
+    subprocess.call(['git', 'push'])
 
 def guiSelect():
     global first_window
