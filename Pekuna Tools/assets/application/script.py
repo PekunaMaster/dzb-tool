@@ -9,7 +9,7 @@ import subprocess
 from AppKit import NSWorkspace
 import time
 from datetime import datetime
-from update_check import checkForUpdates
+import git
 
 # load file names into memory 
 kap_hint = "Kapitalertragsbericht"
@@ -58,10 +58,9 @@ def select_file():
         else:
             guiStart(folder_name)
 
-
 def updateCheck():
-    print(checkForUpdates(__file__, "https://raw.githubusercontent.com/alecmalloc/dzb-tool/blob/main/Pekuna%20Tools/assets/application/script.py"))
-
+    repo = git.Repo("https://github.com/alecmalloc/dzb-tool.git")
+    repo.remotes.upstream.pull('main')
 
 def guiSelect():
     global first_window
