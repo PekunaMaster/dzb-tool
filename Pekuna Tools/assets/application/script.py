@@ -10,9 +10,6 @@ from AppKit import NSWorkspace
 import time
 from datetime import datetime
 
-#test comment 1
-#test comment 2
-
 # load file names into memory 
 kap_hint = "Kapitalertragsbericht"
 ein_hint = "Einkommensbericht"
@@ -73,7 +70,7 @@ def guiSelect():
     first_window.title("DZB Tool")
     first_window.geometry('200x100')
     updateCheck()
-    label = tk.Label(first_window, bg='light green', width=20, text='Bitte DZB ordner aussuchen:').pack(pady=10)
+    label = tk.Label(first_window, bg='light green', width=30, text='Bitte DZB ordner aussuchen:').pack(pady=10)
     open_button = ttk.Button(first_window, text='aussuchen', command=select_file).pack(pady=10)
     first_window.eval('tk::PlaceWindow . center')
     first_window.mainloop()
